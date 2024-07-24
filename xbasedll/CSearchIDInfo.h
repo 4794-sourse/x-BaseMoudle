@@ -11,12 +11,12 @@
 class CSearchIDInfo : public ISearchIDInfo {
 public:
 	CSearchIDInfo();
-	virtual bool GetIDInfoToFilePath(const char* ID, std::wstring& path);
-	virtual bool GetIDInfoToMoudlePath(const char* ID, std::wstring& path);
-	virtual bool GetIDInfoToUrl(const char* ID, std::wstring& path);
-	virtual bool GetIDInfoToCommon(const char* ID, std::wstring& path);
+	virtual bool GetIDInfoToFilePath(const char* ID, std::wstring &Path);
+	virtual bool GetIDInfoToMoudlePath(const char* ID, std::wstring &Path);
+	virtual bool GetIDInfoToUrl(const char* ID, std::wstring &Url);
+	virtual bool GetIDInfoToCommon(const char* ID, std::wstring &Info);
 private:
-	bool GetCommonSearchIDInfo(const char* Key, const char* ID, std::wstring& path);
+	bool GetCommonSearchIDInfo(const char* Key, const char* ID, std::wstring &Info);
 private:
 	std::shared_ptr<rapidxml::file<>> m_xmlFile;
 	std::shared_ptr<rapidxml::xml_document<>> m_docInfo;

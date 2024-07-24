@@ -7,27 +7,27 @@ CSearchIDInfo::CSearchIDInfo() {
 
 }
 
-bool CSearchIDInfo::GetIDInfoToFilePath(const char* ID, std::wstring& path) {
+bool CSearchIDInfo::GetIDInfoToFilePath(const char* ID, std::wstring &Path) {
     
-    return GetCommonSearchIDInfo("File", ID, path);
+    return GetCommonSearchIDInfo("File", ID, Path);
 }
 
-bool CSearchIDInfo::GetIDInfoToMoudlePath(const char* ID, std::wstring& path) {
+bool CSearchIDInfo::GetIDInfoToMoudlePath(const char* ID, std::wstring& Path) {
     
-    return GetCommonSearchIDInfo("Module", ID, path);
+    return GetCommonSearchIDInfo("Module", ID, Path);
  }
 
-bool CSearchIDInfo::GetIDInfoToUrl(const char* ID, std::wstring& path) {
+bool CSearchIDInfo::GetIDInfoToUrl(const char* ID, std::wstring &Url) {
     
-    return GetCommonSearchIDInfo("Url", ID, path);
+    return GetCommonSearchIDInfo("Url", ID, Url);
  }
 
-bool CSearchIDInfo::GetIDInfoToCommon(const char* ID, std::wstring &path) {
+bool CSearchIDInfo::GetIDInfoToCommon(const char* ID, std::wstring &Info) {
     
-    return GetCommonSearchIDInfo("Common", ID, path);
+    return GetCommonSearchIDInfo("Common", ID, Info);
  }
 
-bool CSearchIDInfo::GetCommonSearchIDInfo(const char* Key, const char* ID, std::wstring &path) {
+bool CSearchIDInfo::GetCommonSearchIDInfo(const char* Key, const char* ID, std::wstring &Info) {
     
     bool result = false;
     try {
@@ -56,8 +56,8 @@ bool CSearchIDInfo::GetCommonSearchIDInfo(const char* Key, const char* ID, std::
 
                             int bufSize = MultiByteToWideChar(CP_ACP, 0, nodevalue, -1, NULL, 0);
                             if (bufSize <= 0) return result;
-                            path.resize(bufSize - 1);
-                            MultiByteToWideChar(CP_ACP, 0, nodevalue, -1, &path[0], bufSize);
+                            Info.resize(bufSize - 1);
+                            MultiByteToWideChar(CP_ACP, 0, nodevalue, -1, &Info[0], bufSize);
                             return true;
                         }
                     }
