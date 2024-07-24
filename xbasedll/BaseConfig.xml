@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Value Name="base">
+	<Module>
+		<Item Key="moudle.base" Value="xbase.dll"/>
+	</Module>
+	<File>
+		<Item Key="file.log" Value="\res\log.png"/>
+	</File>
+	<Common>
+		<Item Key="Common.name" Value="x64"/>
+	</Common>
+	<Url>
+		<Item Key="url.service" Value="https://www.x64.com"/>
+	</Url>
+</Value>

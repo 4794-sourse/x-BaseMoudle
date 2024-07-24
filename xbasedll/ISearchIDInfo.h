@@ -3,7 +3,10 @@
 
 class ISearchIDInfo {
 public:
-	virtual void GetIDInfoPath(const wchar_t* ID, const wchar_t* path) = 0;
+	virtual bool GetIDInfoToFilePath(const wchar_t* ID, std::wstring& path) = 0;
+	virtual bool GetIDInfoToMoudlePath(const wchar_t* ID, std::wstring& path) = 0;
+	virtual bool GetIDInfoToUrl(const wchar_t* ID, std::wstring& path) = 0;
+	virtual bool GetIDInfoToCommon(const wchar_t* ID, std::wstring& path) = 0;
 };
 // {2500C8D6-AE5B-476D-9087-EAC911628046}
 static const GUID IID_SearchIDInfo =
