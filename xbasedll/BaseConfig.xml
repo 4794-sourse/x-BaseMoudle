@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Value Name="base">
 	<Module>
-		<Item Key="moudle.base" Value="xbase.dll"/>
+		<Item Key="module.base" Value="xbase.dll"/>
 	</Module>
 	<File>
 		<Item Key="file.log" Value="\res\log.png"/>

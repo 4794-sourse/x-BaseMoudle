@@ -6,6 +6,8 @@
 CSearchIDInfo::CSearchIDInfo() {
 
 }
+CSearchIDInfo::~CSearchIDInfo() {
+}
 
 bool CSearchIDInfo::GetIDInfoToFilePath(const char* ID, std::wstring &Path) {
     

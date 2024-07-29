@@ -1,0 +1,4 @@
+LIBRARY
+
+EXPORTS
+	Create_x64_Object

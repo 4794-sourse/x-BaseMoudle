@@ -8,13 +8,19 @@
 
 #define BASECONFIG "BaseConfig.xml"
 
-class CSearchIDInfo : public ISearchIDInfo {
+class CSearchIDInfo : public ComObjectImpl<CSearchIDInfo>, public ISearchIDInfo {
 public:
 	CSearchIDInfo();
-	virtual bool GetIDInfoToFilePath(const char* ID, std::wstring &Path);
-	virtual bool GetIDInfoToMoudlePath(const char* ID, std::wstring &Path);
-	virtual bool GetIDInfoToUrl(const char* ID, std::wstring &Url);
-	virtual bool GetIDInfoToCommon(const char* ID, std::wstring &Info);
+	virtual ~CSearchIDInfo();
+	BEGIN_X64_OBJECT_MAP(CSearchIDInfo)
+		X64_OBJECT_INTERFACE(ISearchIDInfo)
+		X64_OBJECT_INTERFACE(IxUnknown)
+	END_QAX_OBJECT_MAP();
+	
+	 virtual bool GetIDInfoToFilePath(const char* ID, std::wstring &Path) override;
+	 virtual bool GetIDInfoToMoudlePath(const char* ID, std::wstring &Path) override;
+	 virtual bool GetIDInfoToUrl(const char* ID, std::wstring &Url) override ;
+	 virtual bool GetIDInfoToCommon(const char* ID, std::wstring &Info) override;
 private:
 	bool GetCommonSearchIDInfo(const char* Key, const char* ID, std::wstring &Info);
 private:
